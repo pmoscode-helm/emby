@@ -1,0 +1,8 @@
+apiVersion: v2
+name: emby
+description: Emby in a Helm Chart. Emby Server is a home media server.
+
+type: application
+
+version: 1.0.0
+appVersion: "4.8.3.0"
