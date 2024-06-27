@@ -4,5 +4,5 @@ description: Emby in a Helm Chart. Emby Server is a home media server.
 
 type: application
 
-version: 1.0.0
-appVersion: "4.8.3.0"
+version: 1.2.0
+appVersion: "4.8.8.0"
