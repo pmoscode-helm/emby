@@ -84,3 +84,4 @@ fabric.properties
 **/charts/*.tgz
 
 .env
+.cr-release-packages
