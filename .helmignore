@@ -21,3 +21,16 @@
 .idea/
 *.tmproj
 .vscode/
+
+
+README.md.gotmpl
+artifacthub-repo.yml
+assets
+tests
+.pre-commit-config.yaml
+renovate.json
+Taskfile.yaml
+.env-template
+.env
+.github
+.helmignore

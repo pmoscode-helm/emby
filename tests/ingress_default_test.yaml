@@ -1,0 +1,10 @@
+suite: test default ingress
+chart:
+  version: 9.9.9+test
+  appVersion: 9.9.9
+tests:
+  - it: shouldn't render
+    template: templates/ingress.yaml
+    asserts:
+      - hasDocuments:
+          count: 0

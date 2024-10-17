@@ -1,4 +1,3 @@
-{{- if and (eq .Values.service.type "LoadBalancer") (.Values.ingress.enabled) }}
 apiVersion: v1
 kind: Service
 metadata:
@@ -6,7 +5,11 @@ metadata:
   labels:
     {{- include "emby.labels" . | nindent 4 }}
 spec:
-  type: LoadBalancer
+  {{- if and (eq .Values.service.type "LoadBalancer") (.Values.ingress.enabled) }}
+  type: ClusterIP
+  {{- else }}
+  type: {{ .Values.service.type }}
+  {{- end }}
   ports:
     - port: {{ .Values.service.port }}
       targetPort: http
@@ -14,4 +17,3 @@ spec:
       name: http
   selector:
     {{- include "emby.selectorLabels" . | nindent 4 }}
-{{- end }}

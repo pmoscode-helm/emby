@@ -1,0 +1,59 @@
+# {{ template "chart.name" . }} Helm Chart
+{{ template "chart.versionBadge" . }}
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/emby)](https://artifacthub.io/packages/search?repo=emby)
+
+From {{ template "chart.homepage" . }}:
+> Emby Server is a home media server built on top of other popular open source technologies such as Service Stack, jQuery, jQuery mobile, and .NET Core. It features a REST-based API with built-in documention to facilitate client development. We also have client libraries for our API to enable rapid development.
+
+
+## Get Repo Info
+
+    helm repo add my-emby https://pmoscode-helm.github.io/emby/
+    helm repo update
+
+## Install chart
+
+    helm install [RELEASE_NAME] my-emby/emby
+
+The command deploys emby on the Kubernetes cluster in the default configuration.
+
+See configuration below.
+
+See [helm install](https://helm.sh/docs/helm/helm_install/) for command documentation.
+
+## Uninstall Chart
+
+    helm uninstall [RELEASE_NAME]
+
+This removes all the Kubernetes components associated with the chart and deletes the release.
+
+See [helm uninstall](https://helm.sh/docs/helm/helm_uninstall/) for command documentation.
+
+## Upgrading Chart
+
+    helm upgrade [RELEASE_NAME] [CHART] --install
+
+See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documentation.
+
+{{ template "chart.deprecationWarning" . }}
+
+{{ template "chart.requirementsSection" . }}
+
+{{ template "chart.valuesHeader" . }}
+
+{{ template "chart.valuesTable" . }}
+
+{{ template "chart.maintainersSection" . }}
+
+## Contributing
+
+If you want to add features or bugfixes, please open an issue (either feature or bug) and provide also an unittest (https://github.com/helm-unittest/helm-unittest).
+To make things easier, you can use Taskfile (https://taskfile.dev/) to get a small shortcut for some useful commands.
+
+You also need to copy the ".env-template" file as ".env" and configure it for your needs.
+
+The Taskfile itself needs this tools to run the tasks:
+- https://helm.sh/docs/intro/quickstart/
+- https://github.com/norwoodj/helm-docs
+- https://github.com/helm-unittest/helm-unittest/
+- https://github.com/pawamoy/git-changelog
