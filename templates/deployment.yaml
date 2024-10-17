@@ -60,7 +60,7 @@ spec:
               mountPath: {{ .mountPath | quote }}
             {{- end }}
             {{- end }}
-            {{- with .Values.volumeMounts }}
+            {{- with .Values.additionalVolumeMounts }}
             {{- toYaml . | nindent 12 }}
             {{- end }}
       volumes:
@@ -82,7 +82,7 @@ spec:
             claimName: {{ include "emby.fullname" $ }}-{{ .name }}-pvc
           {{- end }}
           {{- end }}
-      {{- with .Values.volumes }}
+      {{- with .Values.additionalVolumes }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
       {{- with .Values.nodeSelector }}

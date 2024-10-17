@@ -1,34 +1,46 @@
 image:
+  # -- repository with Emby image
   repository: emby/embyserver
-  pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
+  # -- pull policy
+  pullPolicy: Always
+  # -- current version of the image. Default: Charts appVersion.
   tag: ""
 
+# -- imagePullSecrets (not needed, if default image is used)
 imagePullSecrets: []
+# -- @ignore
 nameOverride: ""
+# -- @ignore
 fullnameOverride: ""
 
+# -- the UID to run emby as
 uid: 1000
+# -- the GID to run emby as
 gid: 100
+# -- a comma-separated list of additional GIDs to run emby as
 gidlist: 100
 
 serviceAccount:
-  # Specifies whether a service account should be created
+  # -- enable serviceAccount
   create: true
-  # Automatically mount a ServiceAccount's API credentials?
+  # -- automatically mount a ServiceAccount's API credentials?
   automount: true
-  # Annotations to add to the service account
+  # -- add annotations to serviceAccount
   annotations: {}
-  # The name of the service account to use.
-  # If not set and create is true, a name is generated using the fullname template
+  # -- name of the serviceAccount (will be generated if empty)
   name: ""
 
+# -- @ignore
 podAnnotations: {}
+
+# -- @ignore
 podLabels: {}
 
+# -- podSecurityContext configuration
 podSecurityContext: {}
   # fsGroup: 2000
 
+# -- securityContext configuration
 securityContext: {}
   # capabilities:
   #   drop:
@@ -38,9 +50,12 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
+  # -- service type
   type: ClusterIP
+  # -- service port
   port: 8096
 
+# -- Configure ingress.
 ingress:
   enabled: false
   className: ""
@@ -57,6 +72,7 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
+# -- @ignore
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
@@ -69,20 +85,28 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
 
+# -- liveness probe configuration
 livenessProbe:
   httpGet:
     path: /
     port: http
+
+# -- readiness probe configuration
 readinessProbe:
   httpGet:
     path: /
     port: http
 
 persistence:
+  # -- enable persistence?
   enabled: false
+  # -- existing claim
   existingClaim:
+  # -- desired storageClass
   storageClass:
+  # -- storage access mode
   accessMode: ReadWriteOnce
+  # -- storage size
   size: 20Gi
 
 nfsMounts:
@@ -102,21 +126,24 @@ nfsMounts:
       # -- mark mount as readonly
       readOnly: false
 
-# Additional volumes on the output Deployment definition.
-volumes: []
+# -- additional volume(s) to mount into the container
+additionalVolumes: []
 # - name: foo
 #   secret:
 #     secretName: mysecret
 #     optional: false
 
-# Additional volumeMounts on the output Deployment definition.
-volumeMounts: []
+# -- mountpoint(s) of the additional volumes inside the container
+additionalVolumeMounts: []
 # - name: foo
 #   mountPath: "/etc/foo"
 #   readOnly: true
 
+# -- @ignore
 nodeSelector: {}
 
+# -- @ignore
 tolerations: []
 
+# -- @ignore
 affinity: {}
