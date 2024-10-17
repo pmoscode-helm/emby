@@ -83,3 +83,4 @@ fabric.properties
 # Chart dependencies
 **/charts/*.tgz
 
+.env
