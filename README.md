@@ -1,5 +1,5 @@
 # emby Helm Chart
-![Version: 1.2.0](https://img.shields.io/badge/Version-1.2.0-informational?style=flat-square)
+![Version: 1.3.0](https://img.shields.io/badge/Version-1.3.0-informational?style=flat-square)
 [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/emby)](https://artifacthub.io/packages/search?repo=emby)
 
 From https://emby.media:
