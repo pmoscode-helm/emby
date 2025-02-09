@@ -62,7 +62,7 @@ See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command document
 | persistence.storageClass | string | `nil` | desired storageClass |
 | podSecurityContext | object | `{}` | podSecurityContext configuration |
 | readinessProbe | object | `{"httpGet":{"path":"/","port":"http"}}` | readiness probe configuration |
-| securityContext | object | `{}` | securityContext configuration |
+| securityContext | object | `{"allowPrivilegeEscalation":false}` | securityContext configuration |
 | service.port | int | `8096` | service port |
 | service.type | string | `"ClusterIP"` | service type |
 | serviceAccount.annotations | object | `{}` | add annotations to serviceAccount |
