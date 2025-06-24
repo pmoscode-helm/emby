@@ -12,7 +12,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Features
 
-- no privilege escalation ([1b03f09](https://github.com/pmoscode-helm/emby/commit/1b03f0903d0f3eef2b5073871a6b7936f28c5bcc) by Peter Motzko).
+- update Emby version to 4.8.11.0 ([274797c](https://github.com/pmoscode-helm/emby/commit/274797c0b39570c509ee593684552dab7974651d) by Peter Motzko).
+- no privilege escalation ([e57fa8b](https://github.com/pmoscode-helm/emby/commit/e57fa8bf2308932bb884bc7dcf3f9ea1f8edadf8) by Peter Motzko).
 - update Emby version to 4.8.10.0 ([a3bb19a](https://github.com/pmoscode-helm/emby/commit/a3bb19a60af62d329b421f143cdbf1fbf27222e7) by Peter Motzko).
 
 <!-- insertion marker -->
