@@ -8,15 +8,28 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 <!-- insertion marker -->
 ## Unreleased
 
-<small>[Compare with latest](https://github.com/pmoscode-helm/emby/compare/emby-1.3.0...HEAD)</small>
+<small>[Compare with latest](https://github.com/pmoscode-helm/emby/compare/emby-1.3.1...HEAD)</small>
 
 ### Features
 
-- update Emby version to 4.8.11.0 ([274797c](https://github.com/pmoscode-helm/emby/commit/274797c0b39570c509ee593684552dab7974651d) by Peter Motzko).
+- update chart version ([a946a22](https://github.com/pmoscode-helm/emby/commit/a946a223ce3ea0751515386122ad98e13734779a) by Peter Motzko).
+
+### Bug Fixes
+
+- custom probes merge issue #7 ([67e20d7](https://github.com/pmoscode-helm/emby/commit/67e20d7964b222a122bed0fd594b866bdfba4ac0) by Peter Motzko).
+- lowercase resource names ([bc559ec](https://github.com/pmoscode-helm/emby/commit/bc559ecf8cfe815d690f922fbe29801c0d9abb00) by Peter Motzko).
+
+<!-- insertion marker -->
+## [emby-1.3.1](https://github.com/pmoscode-helm/emby/releases/tag/emby-1.3.1) - 2025-06-24
+
+<small>[Compare with emby-1.3.0](https://github.com/pmoscode-helm/emby/compare/emby-1.3.0...emby-1.3.1)</small>
+
+### Features
+
+- update Emby version to 4.8.11.0 ([081d4a3](https://github.com/pmoscode-helm/emby/commit/081d4a3a9398a5b60f5063bca12a623159604322) by Peter Motzko).
 - no privilege escalation ([e57fa8b](https://github.com/pmoscode-helm/emby/commit/e57fa8bf2308932bb884bc7dcf3f9ea1f8edadf8) by Peter Motzko).
 - update Emby version to 4.8.10.0 ([a3bb19a](https://github.com/pmoscode-helm/emby/commit/a3bb19a60af62d329b421f143cdbf1fbf27222e7) by Peter Motzko).
 
-<!-- insertion marker -->
 ## [emby-1.3.0](https://github.com/pmoscode-helm/emby/releases/tag/emby-1.3.0) - 2024-10-21
 
 <small>[Compare with emby-1.2.0](https://github.com/pmoscode-helm/emby/compare/emby-1.2.0...emby-1.3.0)</small>
