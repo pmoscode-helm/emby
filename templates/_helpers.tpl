@@ -60,3 +60,30 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+
+{{/*
+Default Liveness Probe
+*/}}
+{{- define "emby.defaultLivenessProbe" -}}
+{{- if .Values.livenessProbe }}
+{{- toYaml .Values.livenessProbe }}
+{{- else -}}
+httpGet:
+  path: /
+  port: http
+{{- end}}
+{{- end }}
+
+{{/*
+Default Readiness Probe
+*/}}
+{{- define "emby.defaultReadinessProbe" -}}
+{{- if .Values.readinessProbe }}
+{{- toYaml .Values.readinessProbe }}
+{{- else -}}
+httpGet:
+  path: /
+  port: http
+{{- end }}
+{{- end }}

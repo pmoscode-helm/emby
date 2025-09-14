@@ -87,16 +87,10 @@ resources: {}
   #   memory: 128Mi
 
 # -- liveness probe configuration
-livenessProbe:
-  httpGet:
-    path: /
-    port: http
+livenessProbe: {}
 
 # -- readiness probe configuration
-readinessProbe:
-  httpGet:
-    path: /
-    port: http
+readinessProbe: {}
 
 persistence:
   # -- enable persistence?

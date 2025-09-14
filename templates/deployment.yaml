@@ -46,9 +46,9 @@ spec:
             - name: GIDLIST
               value: "{{ .Values.gidlist }}"
           livenessProbe:
-            {{- toYaml .Values.livenessProbe | nindent 12 }}
+            {{- include "emby.defaultLivenessProbe" . | nindent 12 }}
           readinessProbe:
-            {{- toYaml .Values.readinessProbe | nindent 12 }}
+            {{- include "emby.defaultReadinessProbe" . | nindent 12 }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
