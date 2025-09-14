@@ -20,7 +20,7 @@ tests:
           value: ClusterIP
 
   - it: should not render LB service
-    template: templates/service-LB.yaml
+    template: templates/service-lb.yaml
     asserts:
       - hasDocuments:
           count: 0

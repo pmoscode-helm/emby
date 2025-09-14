@@ -28,7 +28,7 @@ tests:
           count: 1
 
   - it: should not render "LoadBalancer" service, when service.type == "LoadBalancer" and Ingress is disabled
-    template: templates/service-LB.yaml
+    template: templates/service-lb.yaml
     set:
       service.type: LoadBalancer
       ingress.enabled: false
@@ -37,7 +37,7 @@ tests:
           count: 0
 
   - it: should render "LoadBalancer" service, when service.type == "LoadBalancer" and Ingress is enabled
-    template: templates/service-LB.yaml
+    template: templates/service-lb.yaml
     set:
       service.type: LoadBalancer
       ingress.enabled: true
@@ -50,7 +50,7 @@ tests:
           of: Service
       - equal:
           path: metadata.name
-          value: RELEASE-NAME-emby-LB
+          value: RELEASE-NAME-emby-lb
       - exists:
           path: spec.type
       - equal:
