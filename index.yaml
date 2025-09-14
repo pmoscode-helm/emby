@@ -18,6 +18,42 @@ entries:
           email: info@pmoscode.de
     apiVersion: v2
     appVersion: 4.8.11.0
+    created: "2025-09-14T22:42:29.254925+02:00"
+    description: Your personal media on any device. Bringing all of your home videos,
+      music, and photos together into one place has never been easier. Your personal
+      Emby Server automatically converts and streams your media on-the-fly to play
+      on any device.
+    digest: 8a0f529d623803745f9ce24705ceecd2a3c080edc90d099dbfc0b399bf4b0df7
+    home: https://emby.media
+    icon: https://github.com/pmoscode-helm/emby/raw/main/assets/logo.png
+    maintainers:
+    - email: info@pmoscode.de
+      name: pmoscode
+      url: https://pmoscode.de
+    name: emby
+    sources:
+    - https://emby.media/
+    type: application
+    urls:
+    - https://github.com/pmoscode-helm/emby/releases/download/emby-1.3.2/emby-1.3.2.tgz
+    version: 1.3.2
+  - annotations:
+      artifacthub.io/images: |
+        - name: Emby
+          image: emby/embyserver:4.8.11.0
+          platforms:
+            - linux/amd64
+      artifacthub.io/license: MIT
+      artifacthub.io/links: |
+        - name: Source
+          url: https://github.com/pmoscode-helm/emby
+        - name: support
+          url: https://github.com/pmoscode-helm/emby/issues
+      artifacthub.io/maintainers: |-
+        - name: pmoscode
+          email: info@pmoscode.de
+    apiVersion: v2
+    appVersion: 4.8.11.0
     created: "2025-06-24T23:21:01.320877+02:00"
     description: Your personal media on any device. Bringing all of your home videos,
       music, and photos together into one place has never been easier. Your personal
@@ -109,4 +145,4 @@ entries:
     urls:
     - https://github.com/pmoscode-helm/emby/releases/download/emby-1.2.0/emby-1.2.0.tgz
     version: 1.2.0
-generated: "2025-06-24T23:21:01.320893+02:00"
+generated: "2025-09-14T22:42:29.254946+02:00"
