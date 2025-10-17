@@ -1,5 +1,5 @@
 # emby Helm Chart
-![Version: 1.3.2](https://img.shields.io/badge/Version-1.3.2-informational?style=flat-square)
+![Version: 1.4.0](https://img.shields.io/badge/Version-1.4.0-informational?style=flat-square)
 [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/emby)](https://artifacthub.io/packages/search?repo=emby)
 
 From https://emby.media:
@@ -47,7 +47,7 @@ See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command document
 | image.tag | string | `""` | current version of the image. Default: Charts appVersion. |
 | imagePullSecrets | list | `[]` | imagePullSecrets (not needed, if default image is used) |
 | ingress | object | `{"annotations":{},"className":"","enabled":false,"hosts":[{"host":"chart-example.local","paths":[{"path":"/","pathType":"ImplementationSpecific"}]}],"tls":[]}` | Configure ingress. |
-| livenessProbe | object | `{"httpGet":{"path":"/","port":"http"}}` | liveness probe configuration |
+| livenessProbe | object | `{}` | liveness probe configuration |
 | nfsMounts.enabled | bool | `false` | enable mounting of nfs exports |
 | nfsMounts.mounts[0] | object | `{"capacity":"20Gi","exportPath":"/movies","mountPath":"/movies","name":"content","nfsServer":"xxx.xxx.xxx.xxx","readOnly":false}` | name of mount |
 | nfsMounts.mounts[0].capacity | string | `"20Gi"` | desired capacity (usually not needed for nfs) |
@@ -61,7 +61,7 @@ See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command document
 | persistence.size | string | `"20Gi"` | storage size |
 | persistence.storageClass | string | `nil` | desired storageClass |
 | podSecurityContext | object | `{}` | podSecurityContext configuration |
-| readinessProbe | object | `{"httpGet":{"path":"/","port":"http"}}` | readiness probe configuration |
+| readinessProbe | object | `{}` | readiness probe configuration |
 | securityContext | object | `{"allowPrivilegeEscalation":false}` | securityContext configuration |
 | service.port | int | `8096` | service port |
 | service.type | string | `"ClusterIP"` | service type |
